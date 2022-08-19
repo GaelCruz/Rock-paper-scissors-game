@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(38, 40, 41);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+}
+
+.score-board{
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.score-box{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.number-scores{
+    font-size: 200px;
+    color: white;
+    border: 3px;
+    border-color: white;
+    border-style: solid;
+    padding: 10px;
+
+
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.choices{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 80px;
+}
+
+.choices-box{
+    margin-top: 50px;
+}
+
+.white-cir{
+    background-color: white;
+    border-radius: 50%;
+    border: 20px solid white;
+    transition: all 0.3s ease;
+}
+
+.white-cir:hover{
+    cursor: pointer;
+    background-color: yellow;
+    border: 20px solid yellow;
+}
