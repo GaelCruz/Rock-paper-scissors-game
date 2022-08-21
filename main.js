@@ -1,5 +1,5 @@
-const playerScore = 0;
-const computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 const playerScore_span = document.getElementById("player-score");
 const computerScore_span = document.getElementById("computer-score");
 const rock_div = document.getElementById("rock");
@@ -12,23 +12,46 @@ function getComputerChoice(){
     return choices[randomNum];
 }
 
+function win(user, computer){
+    playerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+}
+
+function lose(user, computer){
+    computerScore++;
+    computerScore_span.innerHTML = computerScore;
+
+}
+
+function gameOver(){
+    if (computerScore === 5){
+        console.log("Game over");
+    }
+}
+
+function tie(user, computer){
+    console.log("Its a tie");
+}
+
+
 function game(user_choice){
     const computerChoice = getComputerChoice();
     switch (user_choice + computerChoice){
         case "rs":
         case "pr":
         case "sp":
-            console.log("User wins");
+            win();
             break;
         case "sr":
         case "rp":
         case "ps":
-            console.log("User loses");
+            lose();
             break;
         case "ss":
         case "rr":
         case "pp":
-            console.log("tie");
+            tie();
             break;
     }
 }
@@ -47,5 +70,6 @@ function main(){
     })
 }
 
+gameOver();
 main();
 
